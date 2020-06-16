@@ -1,0 +1,409 @@
+/* making navbar */
+header {
+	padding: 10px 0px 10px;
+	background-color: #fff;
+	border-bottom: 1px solid lightgray;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	z-index: 2;
+}
+
+/* making navbar sticky */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.brand-name {
+	font-family: 'Pacifico', cursive;
+	color: #000;
+	font-size: 40px;
+	text-decoration: none;
+}
+
+/* class for pink colored text */
+.pink {
+	color: #FF6264;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.text-muted {
+	color: #6c757d !important;
+}
+
+/* making jumbotron */
+.jumbotron {
+	margin-top: 20px;
+	height: 350px;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+      padding: 4rem 2rem;
+    }
+}
+
+.jumbotron-fluid {
+	padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+}
+
+/* jumbotron image */
+#jumbo-image1 {
+	background-image: url('../images/post1-image.jpg');
+	background-size: 100% 100%;
+	width: 100%;
+}
+
+/* main content starts */
+.main-content {
+	margin: 30px 80px 20px;
+}
+
+.main-content h1 {
+	margin: 20px 0px 20px;
+}
+
+/* using css grid to make content */
+.content-grid {
+	padding: 30px 0px 60px;
+	display: grid;
+	grid-template-rows: 500px 400px;
+	grid-template-columns: 25vw 25vw 25vw;
+	grid-gap: 20px;
+	grid-template-areas: 
+	"img img card"
+	"para para recent";
+	justify-content: space-evenly; 
+}
+
+.profile-card {
+	flex-direction: column;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: auto;
+	border: 1px solid lightgray;
+}
+
+/* TODO: Add avatar in about author section */
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.para {
+	text-align: center;
+	margin: 10px;
+}
+
+.contact {
+	padding: 0px 20px;
+}
+
+.social:hover {
+	color: #ff6264;
+}
+
+#img1 {
+	grid-area: img;
+	background-image: url('../images/beach.jpg');
+	background-size: 100% 100%;
+}
+
+#pro-card {
+	grid-area: card;
+}
+
+#paragraph {
+	grid-area: para;
+}
+
+#recent {
+	grid-area: recent;
+}
+
+/* other posts */
+.popular-posts {
+	height: 500px;
+	margin: 0px 0px 30px;
+}
+
+/* adding flip cards that turn 180 degree on hovering */
+.flip-cards-section {
+	padding-top: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* For Apple Safari Browser */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+#flip-card-1 {
+	background-color: #a0ebff;
+}
+
+#flip-card-2 {
+	background-color: #f9bbda;
+}
+
+#flip-card-3 {
+	background-color: #f6c69a;
+}
+
+/* adding media query to make page responsive */
+@media(min-width: 992px) {
+
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+	.jumbotron {
+	margin-top: 20px;
+	height: 450px;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+}
+
+.main-content {
+	margin: 10px;
+}
+
+.main-content p {
+	padding-left: 5px;
+}
+
+.main-content h1 {
+	padding-left: 5px;
+}
+
+.content-grid {
+	padding: 30px 0px 60px;
+	display: grid;
+	grid-template-rows: 300px 500px 360px 450px;
+	grid-template-columns: repeat(3, 25vw);
+	grid-gap: 20px;
+	grid-template-areas: 
+	"img img img"
+	"card card card"
+	"para para para"
+	"recent recent recent";
+	justify-content: space-evenly; 
+}
+
+.flip-cards-section {
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.popular-posts {
+	height: 1000px;
+	margin: 0px 0px 30px;
+}
+}
+
+@media(min-width: 575px) and (max-width: 767px) {
+	.jumbotron {
+	margin-top: 20px;
+	height: 300px;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+}
+
+.main-content {
+	margin: 10px;
+}
+
+.main-content p {
+	padding-left: 5px;
+}
+
+.main-content h1 {
+	padding-left: 5px;
+}
+
+.content-grid {
+	padding: 30px 0px 60px;
+	display: grid;
+	grid-template-rows: 300px 500px 500px 450px;
+	grid-template-columns: repeat(3, 25vw);
+	grid-gap: 20px;
+	grid-template-areas: 
+	"img img img"
+	"card card card"
+	"para para para"
+	"recent recent recent";
+	justify-content: space-evenly; 
+}
+
+.flip-cards-section {
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.popular-posts {
+	height: 1000px;
+	margin: 0px 0px 30px;
+}
+}
+
+@media(min-width: 460px) and (max-width: 574px) {
+	.jumbotron {
+	margin-top: 20px;
+	height: 300px;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+}
+
+.main-content {
+	margin: 10px;
+}
+
+.main-content p {
+	padding-left: 5px;
+}
+
+.main-content h1 {
+	padding-left: 5px;
+}
+
+.content-grid {
+	padding: 30px 0px 60px;
+	display: grid;
+	grid-template-rows: 300px 500px 500px 450px;
+	grid-template-columns: repeat(3, 25vw);
+	grid-gap: 20px;
+	grid-template-areas: 
+	"img img img"
+	"card card card"
+	"para para para"
+	"recent recent recent";
+	justify-content: space-evenly; 
+}
+
+.flip-cards-section {
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.popular-posts {
+	height: 1000px;
+	margin: 0px 0px 30px;
+}
+}
+
+@media(max-width: 460px) {
+	.jumbotron {
+	margin-top: 20px;
+	height: 300px;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+}
+
+.main-content {
+	margin: 10px;
+}
+
+.main-content p {
+	padding-left: 5px;
+}
+
+.main-content h1 {
+	padding-left: 5px;
+}
+
+.content-grid {
+	padding: 30px 0px 60px;
+	display: grid;
+	grid-template-rows: 300px 500px 550px 450px;
+	grid-template-columns: repeat(3, 25vw);
+	grid-gap: 20px;
+	grid-template-areas: 
+	"img img img"
+	"card card card"
+	"para para para"
+	"recent recent recent";
+	justify-content: space-evenly; 
+}
+
+.flip-cards-section {
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.popular-posts {
+	height: 1000px;
+	margin: 0px 0px 30px;
+}
+}

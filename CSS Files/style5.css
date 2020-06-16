@@ -1,0 +1,13 @@
+/* changing jumbo image and the grid image for blog post 5 */
+
+#jumbo-image5 {
+	background-image: url('https://lh3.googleusercontent.com/proxy/s-MOwad--XIQwEZGZtk1Frn3vd9U1NI9p2uYf2yS2Qbyj449gezW0T_WYdohFBmBOpuyNKl7Lq6Pz6Oo-iEiKllR-ttqcx73zktqk5Q8wWwnMjkAPySSlovDblAyV6EE4Prjcql7');
+	background-size: 100% 100%;
+	width: 100%;
+}
+
+#img5 {
+	grid-area: img;
+	background-image: url('https://colorlib.com/blaskan/wp-content/uploads/sites/16/2017/04/01_Article7-350x250.jpg');
+	background-size: 100% 100%;
+}

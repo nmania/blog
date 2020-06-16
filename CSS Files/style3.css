@@ -1,0 +1,13 @@
+/* changing jumbo image and the grid image for blog post 3 */
+
+#jumbo-image3 {
+	background-image: url('https://mcdn.wallpapersafari.com/medium/96/85/gh8M7Y.jpg');
+	background-size: 100% 100%;
+	width: 100%;
+}
+
+#img3 {
+	grid-area: img;
+	background-image: url('https://colorlib.com/blaskan/wp-content/uploads/sites/16/2017/04/01_Article2-350x250.jpg');
+	background-size: 100% 100%;
+}

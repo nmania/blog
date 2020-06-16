@@ -1,0 +1,11 @@
+#jumbo-image2 {
+	background-image: url('https://colorlib.com/blaskan/wp-content/themes/blaskan/assets/images/custom-header.jpg');
+	background-size: 100% 100%;
+	width: 100%;
+}
+
+#img2 {
+	grid-area: img;
+	background-image: url('https://colorlib.com/blaskan/wp-content/uploads/sites/16/2017/04/01_Article1-1140x570.jpg');
+	background-size: 100% 100%;
+}

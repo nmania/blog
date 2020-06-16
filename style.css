@@ -1,0 +1,450 @@
+/* importing other css files */
+
+@import url('CSS Files/style1.css');
+@import url('CSS Files/style2.css');
+@import url('CSS Files/style3.css');
+@import url('CSS Files/style4.css');
+@import url('CSS Files/style5.css');
+
+/* removing extra margins and paddings */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+/* TODO: Setting a background image */
+.bg-img {
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('images/background.jpg');
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	height: 660px;
+}
+
+/* TODO: Add styles to navbar using flex*/
+.header-container {
+	padding-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+}
+
+/* brand name and logo */
+.brand {
+	font-size: 30px;
+	color: #fff;
+	text-decoration: none;
+}
+
+#logo {
+	font-family: 'Chelsea Market', cursive;
+	color: #02b3e4;
+	padding-right: 15px;
+	font-size: 30px;
+}
+
+/* TODO: Add styles to main headings */
+.headings {
+	color: #fff;
+	text-align: center;
+	margin-top: 15%;
+	font-family: 'DM Mono', monospace;
+	flex-direction: row;
+	text-align: center;
+}
+
+.heading1 {
+	font-size: 2.5rem;
+}
+
+.heading2 {
+	font-size: 2rem;
+	font-weight: lighter;
+}
+
+.heading-light {
+	font-weight: lighter;
+}
+
+/* subscribe button and email input field */
+.enter-field {
+	padding: 10px;
+	font-size: 20px;
+	margin-top: 20px;
+	width: 30%;
+}
+
+.secondary-btn {
+	text-decoration: none;
+	padding: 12px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #ff0000;
+}
+
+.secondary-btn:hover {
+	color: #ff0000;
+	background-color: #fff;
+	border: 2px solid #ff0000;
+	transition: 0.3s;
+}
+
+/* menu banner */
+.menu-container {
+	margin: 0px 0px 20px 0px;
+	padding: 20px;
+	background-color: #293745;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.menu-item {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 20px 30px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.menu-item:hover {
+	background-color: #fff;
+	color: #293745;
+	transition: 0.3s;
+}
+
+/* TODO: Making Gallery Of Blog Posts Using CSS Grid */
+.blog-grid {
+	height: 900px;
+	padding: 30px 0px 60px;
+	display: grid;
+	grid-template-columns: 25vw 25vw 25vw;
+	grid-template-rows: repeat(3, 310px);
+	grid-gap: 18px;
+	grid-template-areas: 
+	"top top top top"
+	"mid mid aside aside"
+	"foot ft ft ft"
+}
+
+.grid-box {
+	border-radius: 30px;
+	margin: 10px 20px;
+}
+
+/* titles of blog posts */
+.box-titles {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 40px;
+	color: #000;
+	font-weight: lighter;
+}
+
+/* all urls are taken from a different website helpscout.com but not to violate copyrights */
+#one {
+	grid-area: top;
+	background-image: url('images/post1-image.jpg');
+	background-size: 100% 100%;
+}
+
+#two {
+	grid-area: mid;
+	background-size: 100% 100%;
+	background-image: url('https://colorlib.com/blaskan/wp-content/uploads/sites/16/2017/04/01_Article3.jpg');
+}
+
+#three {
+	grid-area: aside;
+	background-size: 100% 100%;
+	background-image: url('https://colorlib.com/blaskan/wp-content/uploads/sites/16/2017/04/01_Article2-360x270.jpg');
+}
+
+#four {
+	grid-area: foot;
+	background-size: 100% 100%;
+	background-image: url('https://colorlib.com/blaskan/wp-content/uploads/sites/16/2017/04/01_Article7-350x250.jpg');
+}
+
+#five {
+	grid-area: ft;
+	background-size: 100% 100%;
+	background-image: url('https://colorlib.com/blaskan/wp-content/uploads/sites/16/2017/04/01_Article4-350x390.jpg');
+}
+
+/* TODO: Adding Styles To Blog Cards */
+.other-blogs {
+	padding: 10px 0px 40px;
+	height: 240px;
+	width: 100%;
+	text-align: center;
+}
+
+.other-blogs h1 {
+	font-size: 2rem;
+	padding-bottom: 10px;
+}
+
+.card-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.card {
+	width: 33vw;
+	margin: 30px 10px;
+	height: auto;
+	padding: 20px;
+	border: 2px solid lightgrey;
+	border-radius: 20px;
+}
+
+.card:hover {
+	box-shadow: 1px 2px 8px 0px rgba(0,0,0,0.61);
+	transition: 0.38s;
+}
+
+.card-img {
+	height: 400px;
+	width: 100%;
+}
+
+.card-header {
+	text-align: left;
+	font-size: 26px;
+}
+
+.card-para {
+	text-align: left;
+}
+
+.card-1 {
+	border-top: 5px solid #02b3e4 !important;
+}
+
+.card-2 {
+	border-top: 5px solid #ff5483 !important;
+}
+
+.card-3 {
+	border-top: 5px solid #60d69a !important;
+}
+
+/* TODO: Adding A Footer */
+.footer {
+	text-align: center;
+	padding-top: 10px;
+	line-height: 20px;
+	height: 35px;
+	font-weight: lighter;
+}
+
+/* TODO: Making Website Responsive */
+@media(min-width: 992px) {
+
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* making grid and cards appear vertically for a better view */
+@media(min-width: 575px) and (max-width: 767px) {
+.heading1 {
+	font-size: 2.0rem;
+}
+
+.heading2 {
+	font-size: 1.5rem;
+	font-weight: lighter;
+}
+
+.headings {
+	margin-top: 30%;
+}
+
+.blog-grid {
+	height: 1600px;
+	padding: 30px 0px 60px;
+	display: grid;
+	grid-template-columns: 90vw;
+	grid-template-rows: repeat(5, 300px);
+	grid-gap: 18px;
+	grid-template-areas: 
+	"top top top"
+	"mid mid mid"
+	"aside aside aside"
+	"foot foot foot"
+	"ft ft ft"
+}
+
+.other-blogs {
+	padding: 10px 0px 40px;
+	height: 600px;
+	width: 100%;
+	text-align: center;
+}
+
+.card-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.secondary-btn {
+	padding: 9px;
+	font-size: 15px;
+}
+
+.enter-field {
+	padding: 9px;
+	font-size: 12px;
+}
+}
+
+@media(min-width: 460px) and (max-width: 574px) {
+.heading1 {
+	font-size: 2.0rem;
+}
+
+.heading2 {
+	font-size: 1.5rem;
+	font-weight: lighter;
+}
+
+.headings {
+	margin-top: 40%;
+}
+
+.blog-grid {
+	height: 1600px;
+	padding: 30px 0px 60px;
+	display: grid;
+	grid-template-columns: 90vw;
+	grid-template-rows: repeat(5, 300px);
+	grid-gap: 18px;
+	grid-template-areas: 
+	"top top top"
+	"mid mid mid"
+	"aside aside aside"
+	"foot foot foot"
+	"ft ft ft"
+}
+
+.other-blogs {
+	padding: 10px 0px 40px;
+	height: 600px;
+	width: 100%;
+	text-align: center;
+}
+
+.card-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.secondary-btn {
+	padding: 7px;
+	font-size: 15px;
+}
+
+.enter-field {
+	padding: 8px;
+	font-size: 12px;
+}
+
+.card{
+	width: 85vw;
+}
+
+.menu-item{
+	padding: 10px 20px;
+}
+}
+
+@media(max-width: 460px) {
+.heading1 {
+	font-size: 1.5rem;
+}
+
+.heading2 {
+	font-size: 1.0rem;
+	font-weight: lighter;
+}
+
+.headings {
+	margin-top: 40%;
+}
+
+.blog-grid {
+	height: 1560px;
+	padding: 30px 0px 60px;
+	display: grid;
+	grid-template-columns: 90vw;
+	grid-template-rows: repeat(5, 300px);
+	grid-gap: 18px;
+	grid-template-areas: 
+	"top top top"
+	"mid mid mid"
+	"aside aside aside"
+	"foot foot foot"
+	"ft ft ft"
+}
+
+.other-blogs {
+	margin: 0px 0px 40px;
+	height: 600px;
+	width: 100%;
+	text-align: center;
+}
+
+.card-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.secondary-btn {
+	padding: 7px;
+	font-size: 15px;
+}
+
+.enter-field {
+	padding: 8px;
+	font-size: 12px;
+}
+
+.card{
+	width: 85vw;
+}
+
+.menu-item{
+	padding: 10px 20px;
+}
+}
+
+/* IN THIS PAGE:
+
+FLEXBOX IS USED - 3 Times
+CSS GRID IS USED - 1 Time */
+
+/* Copied everything in media query because there are many rules */
